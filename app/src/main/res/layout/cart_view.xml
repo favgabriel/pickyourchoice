@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="10dp"
+    android:background="@color/cardview_light_background">
+
+    <ImageView
+        android:id="@+id/cart_item_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/cart_item_name"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/cart_item_image"
+        android:text="Pizza"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/cart_item_price"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cart_item_name"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/cart_item_image"
+        android:text="NGN 350"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/cart_item_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/cart_item_price"
+        android:text="6"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+</RelativeLayout>

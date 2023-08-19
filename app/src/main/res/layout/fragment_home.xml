@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/adapt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_light_background">
+
+        <AdapterViewFlipper
+            android:id="@+id/adapterViewFlipper"
+            android:layout_width="wrap_content"
+            android:layout_height="133dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:autoStart="true"
+            android:loopViews="false" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adapt"
+        android:layout_centerHorizontal="true"
+        android:text="@string/home_available"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:id="@+id/foodscroll"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_below="@id/textView"
+        android:layout_marginTop="15dp"
+        android:fillViewport="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cardview_light_background">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/available_items"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scrollbars="horizontal" />
+        </androidx.cardview.widget.CardView>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/foodscroll"
+        android:layout_centerHorizontal="true"
+        android:text="@string/home_recommended"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_below="@id/textView2"
+        android:layout_marginTop="15dp"
+        android:fillViewport="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cardview_light_background">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommended_items"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scrollbars="horizontal" />
+        </androidx.cardview.widget.CardView>
+    </HorizontalScrollView>
+
+</RelativeLayout>

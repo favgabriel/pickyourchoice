@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_background"
+    tools:context=".ui.fragments.SignUpFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/signup_email_address"
+            android:layout_width="233dp"
+            android:layout_height="46dp"
+            android:autofillHints="@string/todo"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="@string/signup_your_email_address"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#ccc"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/signup_password"
+            android:layout_width="233dp"
+            android:layout_height="46dp"
+            android:layout_below="@id/signup_email_address"
+            android:layout_marginTop="32dp"
+            android:autofillHints="@string/todo"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="@string/signup_password"
+            android:inputType="textPassword"
+            android:textColorHint="#ccc"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_password"
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/rcheck"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:button="@drawable/custom_checkbox"
+                android:checked="false"
+                android:scaleX="1"
+                android:scaleY="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:autoLink="web"
+                android:text="@string/signup_terms_and_conditions"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signup_btn"
+            android:layout_width="233dp"
+            android:layout_height="46dp"
+            android:layout_below="@id/terms"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/signup_sign_up"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</FrameLayout>
